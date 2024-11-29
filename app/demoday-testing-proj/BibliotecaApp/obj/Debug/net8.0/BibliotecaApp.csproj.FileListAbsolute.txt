@@ -1,0 +1,11 @@
+C:\Users\chris\demoday-testing-proj\BibliotecaApp\bin\Debug\net8.0\BibliotecaApp.deps.json
+C:\Users\chris\demoday-testing-proj\BibliotecaApp\bin\Debug\net8.0\BibliotecaApp.dll
+C:\Users\chris\demoday-testing-proj\BibliotecaApp\bin\Debug\net8.0\BibliotecaApp.pdb
+C:\Users\chris\demoday-testing-proj\BibliotecaApp\obj\Debug\net8.0\BibliotecaApp.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\chris\demoday-testing-proj\BibliotecaApp\obj\Debug\net8.0\BibliotecaApp.AssemblyInfoInputs.cache
+C:\Users\chris\demoday-testing-proj\BibliotecaApp\obj\Debug\net8.0\BibliotecaApp.AssemblyInfo.cs
+C:\Users\chris\demoday-testing-proj\BibliotecaApp\obj\Debug\net8.0\BibliotecaApp.csproj.CoreCompileInputs.cache
+C:\Users\chris\demoday-testing-proj\BibliotecaApp\obj\Debug\net8.0\BibliotecaApp.dll
+C:\Users\chris\demoday-testing-proj\BibliotecaApp\obj\Debug\net8.0\refint\BibliotecaApp.dll
+C:\Users\chris\demoday-testing-proj\BibliotecaApp\obj\Debug\net8.0\BibliotecaApp.pdb
+C:\Users\chris\demoday-testing-proj\BibliotecaApp\obj\Debug\net8.0\ref\BibliotecaApp.dll

@@ -1,0 +1,47 @@
+stages:
+  - build
+  - test
+  - deploy
+
+variables:
+  VERSION: "2.0-app"
+
+# Etapa de Build
+build:
+  stage: build
+  tags:
+    - AWS
+  script:
+    - cd app
+    - dotnet restore
+    - dotnet build --configuration Release
+  artifacts:
+    paths:
+      - app/bin/
+
+# Etapa de Teste
+test:
+  stage: test
+  tags:
+    - AWS
+  script:
+    - cd app
+    - dotnet test --configuration Release --no-build --verbosity normal
+  dependencies:
+    - build
+
+# Etapa de Deploy
+deploy:
+  stage: deploy
+  tags:
+    - AWS
+  before_script:
+    - docker login -u $REGISTRY_USER -p $REGISTRY_PASS
+    - docker rm -f app-docker || true
+  script:
+    # Build e push da imagem Docker
+    - docker build -t bieco013/desafio-docker-aws-gitlab:$VERSION app/.
+    - docker push bieco013/desafio-docker-aws-gitlab:$VERSION
+    # Deploy do container
+    - docker pull bieco013/desafio-docker-aws-gitlab:$VERSION
+    - docker run -dti -p 80:80 --name app-docker bieco013/desafio-docker-aws-gitlab:$VERSION
