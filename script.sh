@@ -2,6 +2,7 @@
 
 # Atualização de pacotes e instalação 
 sudo apt-get update
+sudo apt-get install -y dotnet-sdk-7.0
 sudo apt-get install python3 -y
 sudo apt-get install curl git zip -y
 
