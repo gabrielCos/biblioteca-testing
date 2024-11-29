@@ -27,6 +27,7 @@ test:
     - AWS
   script:
     - cd app
+    - cd demoday-testing-proj
     - dotnet test --configuration Release --no-build --verbosity normal
   dependencies:
     - build
