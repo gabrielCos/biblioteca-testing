@@ -43,8 +43,8 @@ deploy:
   script:
     - cd app
     # Build e push da imagem Docker
-    - docker build -t bieco013/desafio-docker-aws-gitlab:$VERSION ./demoday-testing-proj
-    - docker push bieco013/desafio-docker-aws-gitlab:$VERSION
+    - docker build -t bieco013/demoday-testing-proj:$VERSION ./demoday-testing-proj
+    - docker push bieco013/demoday-testing-proj:$VERSION
     # Deploy do container
-    - docker pull bieco013/desafio-docker-aws-gitlab:$VERSION
-    - docker run -dti -p 80:80 --name app-docker bieco013/desafio-docker-aws-gitlab:$VERSION
+    - docker pull bieco013/demoday-testing-proj:$VERSION
+    - docker run -dti -p 80:80 --name app-docker bieco013/demoday-testing-proj:$VERSION
