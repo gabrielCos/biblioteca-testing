@@ -42,9 +42,8 @@ deploy:
     - docker rm -f app-docker || true
   script:
     - cd app
-    - cd demoday-testing-proj
     # Build e push da imagem Docker
-    - docker build -t bieco013/desafio-docker-aws-gitlab:$VERSION demoday-testing-proj/.
+    - docker build -t bieco013/desafio-docker-aws-gitlab:$VERSION app/.
     - docker push bieco013/desafio-docker-aws-gitlab:$VERSION
     # Deploy do container
     - docker pull bieco013/desafio-docker-aws-gitlab:$VERSION
