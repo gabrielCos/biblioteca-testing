@@ -41,6 +41,8 @@ deploy:
     - docker login -u $REGISTRY_USER -p $REGISTRY_PASS
     - docker rm -f app-docker || true
   script:
+    - cd app
+    - cd demoday-testing-proj
     # Build e push da imagem Docker
     - docker build -t bieco013/desafio-docker-aws-gitlab:$VERSION app/.
     - docker push bieco013/desafio-docker-aws-gitlab:$VERSION
