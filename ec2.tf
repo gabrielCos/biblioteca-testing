@@ -1,7 +1,7 @@
 resource "aws_instance" "web-server-3" {
   ami                    = "ami-0a0e5d9c7acc336f1"
   instance_type          = "t2.micro"
-  key_name               = "inst-test-docker-app" #Adicione sua Key Pairs da AWS aqui!
+  key_name               = "biblioteca-gitlab-docker"
   vpc_security_group_ids = [aws_security_group.bt-avantiSG.id]
   user_data              = file("script.sh")
 
